@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Loan Calculator – Free Mortgage & Loan Payment Calculator',
+  title: 'Loan Calculator ??Free Mortgage & Loan Payment Calculator',
   description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
   metadataBase: new URL('https://loan-calculator-tool.vercel.app'),
   openGraph: {
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://loan-calculator-tool.vercel.app',
     siteName: 'Loan Calculator',
-    title: 'Loan Calculator – Free Mortgage & Loan Payment Calculator',
+    title: 'Loan Calculator ??Free Mortgage & Loan Payment Calculator',
     description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Loan Calculator – Free Mortgage & Loan Payment Calculator',
+    title: 'Loan Calculator ??Free Mortgage & Loan Payment Calculator',
     description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
   },
   robots: {
@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-site-verification" content="hsjncRi9cl3tz3Otd6SJKurSt_V1bZ0AKO-bdWIGeHM" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#7c5cbf" />
@@ -86,22 +87,22 @@ function LanguageSwitcher() {
     <div className="flex items-center gap-2">
       <select className="px-3 py-2 text-sm rounded-lg border border-gray-200 bg-white text-gray-700 hover:border-accent focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2">
         <option value="en">English</option>
-        <option value="ko">한국어</option>
-        <option value="ja">日本語</option>
-        <option value="zh">中文</option>
+        <option value="ko">?�국??/option>
+        <option value="ja">?�本�?/option>
+        <option value="zh">�?��</option>
         <option value="es">Español</option>
         <option value="fr">Français</option>
         <option value="de">Deutsch</option>
         <option value="pt">Português</option>
-        <option value="ru">Русский</option>
-        <option value="ar">العربية</option>
-        <option value="hi">हिन्दी</option>
+        <option value="ru">????кий</option>
+        <option value="ar">ا?عرب?ة</option>
+        <option value="hi">हिन्द�?</option>
         <option value="it">Italiano</option>
         <option value="nl">Nederlands</option>
         <option value="pl">Polski</option>
         <option value="tr">Türkçe</option>
         <option value="vi">Tiếng Việt</option>
-        <option value="th">ไทย</option>
+        <option value="th">ไท�?/option>
         <option value="sv">Svenska</option>
         <option value="da">Dansk</option>
         <option value="no">Norsk</option>
