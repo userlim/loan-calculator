@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg: #fefcff;
+  --text: #2d2640;
+  --text-muted: #807894;
+  --accent: #7c5cbf;
+  --accent-light: #b49ee8;
+  --card-border: #e8ddf5;
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.tool-input {
+  @apply w-full px-4 py-3 text-lg rounded-xl focus:outline-none bg-white;
+  border: 1.5px solid #ddd4e8;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.tool-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(124, 92, 191, 0.1);
+}
+
+.tool-result {
+  @apply text-3xl font-extrabold text-center py-6;
+  color: var(--accent);
+}
+
+.btn-primary {
+  @apply px-6 py-3 text-white font-bold rounded-xl active:scale-95;
+  background: var(--accent);
+  transition: background 0.2s, transform 0.1s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #6a4dab;
+}
+
+.card {
+  @apply bg-white rounded-2xl p-6;
+  border: 1.5px solid var(--card-border);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(100, 70, 150, 0.08);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  .tool-input {
+    @apply text-base py-4;
+    font-size: 16px;
+  }
+}
+
+::selection {
+  background: #d8ccf0;
+  color: var(--text);
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0e8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
