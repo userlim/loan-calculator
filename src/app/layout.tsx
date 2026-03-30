@@ -76,6 +76,14 @@ gtag('config', 'G-P08T3SZDQH');`
 
         <footer className="bg-gray-900 text-gray-300 py-8 mt-16">
           <div className="max-w-6xl mx-auto px-4 text-center">
+            <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
+              <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300">
+                Privacy Policy
+              </a>
+              <a href="/terms" className="text-blue-400 hover:text-blue-300">
+                Terms of Service
+              </a>
+            </div>
             <p>&copy; 2026 Loan Calculator Tool. All rights reserved.</p>
             <p className="text-sm mt-2 text-gray-400">Free financial calculator for educational purposes.</p>
           </div>
