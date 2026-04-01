@@ -3,7 +3,7 @@ import type { MetadataRoute } from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://loan-calculator-tool.vercel.app',
+      url: 'https://loan-payment-calculator-eosin.vercel.app',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,

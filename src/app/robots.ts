@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://loan-calculator-tool.vercel.app/sitemap.xml',
+    sitemap: 'https://loan-payment-calculator-eosin.vercel.app/sitemap.xml',
   };
 }

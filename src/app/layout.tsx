@@ -4,11 +4,11 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Loan Calculator - Free Mortgage & Loan Payment Calculator',
   description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
-  metadataBase: new URL('https://loan-payment-calculator.vercel.app'),
+  metadataBase: new URL('https://loan-payment-calculator-eosin.vercel.app'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://loan-payment-calculator.vercel.app',
+    url: 'https://loan-payment-calculator-eosin.vercel.app',
     siteName: 'Loan Calculator',
     title: 'Loan Calculator - Free Mortgage & Loan Payment Calculator',
     description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
   },
   alternates: {
-    canonical: 'https://loan-payment-calculator.vercel.app',
+    canonical: 'https://loan-payment-calculator-eosin.vercel.app',
   },
   robots: {
     index: true,
