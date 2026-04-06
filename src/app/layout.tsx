@@ -51,12 +51,12 @@ export default function RootLayout({
         <meta name="theme-color" content="#7c5cbf" />
         <meta name="author" content="Loan Calculator Tool" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P08T3SZDQH"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P04TH8XJJ9"></script>
         <script dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'G-P08T3SZDQH');`
+gtag('config', 'G-P04TH8XJJ9');`
         }} />
       </head>
       <body className="bg-white text-gray-900 antialiased">
