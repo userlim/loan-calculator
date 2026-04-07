@@ -2,16 +2,16 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Loan Calculator - Free Mortgage & Loan Payment Calculator',
-  description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
+  title: 'Loan Calculator (Free, 2026) – Monthly Payment & Amortization',
+  description: 'Calculate monthly loan payments in seconds. Free 2026 mortgage & loan calculator with amortization schedule. For mortgages, auto loans, and personal loans.',
   metadataBase: new URL('https://loan-payment-calculator-eosin.vercel.app'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://loan-payment-calculator-eosin.vercel.app',
     siteName: 'Loan Calculator',
-    title: 'Loan Calculator - Free Mortgage & Loan Payment Calculator',
-    description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
+    title: 'Loan Calculator (Free, 2026) – Monthly Payment & Amortization',
+    description: 'Calculate monthly loan payments in seconds. Free 2026 mortgage & loan calculator with amortization schedule. For mortgages, auto loans, and personal loans.',
   },
   twitter: {
     card: 'summary_large_image',
@@ -78,7 +78,16 @@ gtag('config', 'G-P04TH8XJJ9');`
 
         <footer className="bg-gray-900 text-gray-300 py-8 mt-16">
           <div className="max-w-6xl mx-auto px-4 text-center">
-            <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-3">
+              <span className="text-xs text-gray-400 font-semibold">Related Free Tools:</span>
+                <a href="https://take-home-pay-calculator-sandy.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Salary Tax Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Inflation Calculator</a>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Gold Price Calculator</a>
+                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">Gas Price Calculator</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 text-xs">UtiliCalc</a>
+            </div>
+          <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
               <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300">
                 Privacy Policy
               </a>

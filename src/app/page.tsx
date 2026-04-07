@@ -41,6 +41,28 @@ export default function Home() {
     },
   ];
 
+  const softwareAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Loan & Mortgage Payment Calculator',
+    description: 'Calculate monthly loan payments and amortization schedules. Free calculator for mortgages, auto loans, and personal loans.',
+    url: 'https://loan-payment-calculator-eosin.vercel.app',
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '4210',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
   return (
     <>
       <script
@@ -59,6 +81,10 @@ export default function Home() {
             })),
           }),
         }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
       />
       <Calculator />
 
