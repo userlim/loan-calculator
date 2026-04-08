@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Loan Calculator (Free, 2026) – Monthly Payment & Amortization',
@@ -51,8 +52,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#7c5cbf" />
         <meta name="author" content="Loan Calculator Tool" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-P04TH8XJJ9"></script>
-        <script dangerouslySetInnerHTML={{
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-P04TH8XJJ9" strategy="lazyOnload" />
+        <Script id="gtag-init" strategy="lazyOnload" dangerouslySetInnerHTML={{
           __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
