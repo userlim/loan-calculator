@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Calculator from './calculator';
 
 export const metadata: Metadata = {
-  title: 'Free Loan & Mortgage Calculator with Amortization Schedule',
-  description: 'Use our free loan calculator to compute monthly payments, total interest, and generate amortization schedules. Perfect for mortgages, auto loans, personal loans, and student loans.',
+  title: 'Free Loan Calculator (2026) – Monthly Payment & Amortization Schedule',
+  description: 'Calculate loan payments with a full amortization schedule. Works for mortgages, auto loans, and personal loans. Free, accurate, instant results — no signup.',
   keywords: 'loan calculator, mortgage calculator, loan payment calculator, amortization calculator, monthly payment, interest calculator',
   openGraph: {
     title: 'Free Loan & Mortgage Calculator with Amortization Schedule',
