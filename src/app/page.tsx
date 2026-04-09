@@ -122,6 +122,32 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Extended Content Section for SEO depth */}
+      <section id="content-depth-section" className="mt-12 max-w-3xl mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6">Complete Guide</h2>
+        
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">How Loan Amortization Works</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Amortization is the process of paying off a loan through regular installments over time. Each payment consists of two parts: principal (the amount that reduces your loan balance) and interest (the cost of borrowing). In the early years of a loan, most of your payment goes toward interest. As the loan matures, the principal portion increases while the interest portion decreases. This is called a standard amortization schedule.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Understanding Interest Rates: Fixed vs. Variable</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Fixed-rate loans maintain the same interest rate throughout the loan term, providing predictable monthly payments. Variable-rate (adjustable-rate) loans have rates that change periodically based on a benchmark rate like the prime rate or SOFR. ARMs typically start with lower rates but carry the risk of future increases. For a 30-year $300,000 mortgage, a 1% rate difference (6% vs. 7%) results in roughly $200 more per month and over $70,000 more in total interest.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Types of Loans and Their Characteristics</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `<strong>Mortgages</strong> are secured by real property, typically with 15-30 year terms and the lowest interest rates. <strong>Auto loans</strong> are secured by the vehicle, usually 3-7 years with moderate rates. <strong>Personal loans</strong> are unsecured, with higher rates but flexible use. <strong>Student loans</strong> include federal (fixed rates, income-driven repayment options) and private (variable rates possible, fewer protections). Our calculator works with all loan types — just enter the amount, rate, and term.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Strategies for Paying Off Loans Faster</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Several strategies can help you pay off loans early and save thousands in interest. <strong>Biweekly payments</strong> (paying half your monthly amount every two weeks) result in 13 full payments per year instead of 12, potentially shaving years off a 30-year mortgage. <strong>Extra principal payments</strong> — even an extra $100/month on a $250,000 mortgage at 7% — can save over $80,000 in interest and reduce the loan term by 7+ years. <strong>Refinancing</strong> to a lower rate can dramatically reduce total costs when rates drop.` }} />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-lg font-semibold mb-2">Key Metrics to Understand Before Borrowing</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Before taking any loan, understand these key metrics: <strong>APR</strong> (Annual Percentage Rate) includes fees and gives a more accurate cost picture than the interest rate alone. <strong>DTI</strong> (Debt-to-Income Ratio) — lenders typically want total debt payments below 36-43% of gross income. <strong>LTV</strong> (Loan-to-Value Ratio) — for mortgages, LTV above 80% typically requires PMI (Private Mortgage Insurance), adding 0.5-1% annually to your costs.` }} />
+            </div>
+      </section>
     </>
   );
 }
