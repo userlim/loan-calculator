@@ -669,7 +669,7 @@ export default function Calculator() {
           <h2 className="text-2xl font-bold text-accent">{t.title}</h2>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t.loanAmount}
             </label>
             <input
@@ -681,7 +681,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t.downPayment}
             </label>
             <input
@@ -693,7 +693,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t.interestRate}
             </label>
             <input
@@ -706,7 +706,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t.loanTerm}
             </label>
             <input
@@ -716,7 +716,7 @@ export default function Calculator() {
               className="tool-input mb-3"
             />
             <div className="grid grid-cols-3 gap-2">
-              <div className="text-xs font-semibold text-gray-600 col-span-3 mb-1">{t.quickTerms}:</div>
+              <div className="text-xs font-semibold text-gray-400 col-span-3 mb-1">{t.quickTerms}:</div>
               {[5, 10, 15, 20, 25, 30].map((years) => (
                 <button
                   key={years}
@@ -724,7 +724,7 @@ export default function Calculator() {
                   className={`py-2 px-3 text-sm font-bold rounded-lg transition-all ${
                     state.loanTerm === years
                       ? 'bg-accent text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : 'bg-white/[0.04] text-gray-300 hover:bg-gray-200'
                   }`}
                 >
                   {years}y
@@ -734,7 +734,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t.loanType}
             </label>
             <select
@@ -750,7 +750,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-gray-700 mb-2">
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
               {t.language}
             </label>
             <select
@@ -790,28 +790,28 @@ export default function Calculator() {
         {results && (
           <div className="space-y-6">
             <div className="card">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">Results</h3>
+              <h3 className="text-lg font-semibold text-gray-300 mb-4">Results</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">{t.monthlyPayment}</p>
+                  <p className="text-sm text-gray-400 mb-1">{t.monthlyPayment}</p>
                   <p className="tool-result text-3xl">{formatCurrency(results.monthlyPayment)}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-xs text-gray-600 mb-1">{t.totalPayment}</p>
+                  <div className="bg-white/[0.02] rounded-lg p-4">
+                    <p className="text-xs text-gray-400 mb-1">{t.totalPayment}</p>
                     <p className="text-lg font-bold text-accent">
                       {formatCurrency(results.totalPayment)}
                     </p>
                   </div>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <p className="text-xs text-gray-600 mb-1">{t.totalInterest}</p>
+                  <div className="bg-white/[0.02] rounded-lg p-4">
+                    <p className="text-xs text-gray-400 mb-1">{t.totalInterest}</p>
                     <p className="text-lg font-bold text-red-500">
                       {formatCurrency(results.totalInterest)}
                     </p>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-4">
-                  <p className="text-xs text-gray-600 mb-1">{t.ltvRatio}</p>
+                <div className="bg-white/[0.02] rounded-lg p-4">
+                  <p className="text-xs text-gray-400 mb-1">{t.ltvRatio}</p>
                   <p className="text-lg font-bold text-accent">{results.ltvRatio.toFixed(2)}%</p>
                 </div>
               </div>
@@ -819,7 +819,7 @@ export default function Calculator() {
 
             {/* Principal vs Interest Breakdown */}
             <div className="card">
-              <h3 className="text-lg font-semibold text-gray-700 mb-4">{t.principalVsInterest}</h3>
+              <h3 className="text-lg font-semibold text-gray-300 mb-4">{t.principalVsInterest}</h3>
               <div className="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
                 <div
                   className="bg-accent h-full flex items-center justify-end pr-2"
@@ -832,11 +832,11 @@ export default function Calculator() {
               </div>
               <div className="flex justify-between text-sm mt-3">
                 <div>
-                  <p className="text-gray-600">Principal</p>
+                  <p className="text-gray-400">Principal</p>
                   <p className="font-bold text-accent">{formatCurrency(principalTotal)}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-gray-600">Interest</p>
+                  <p className="text-gray-400">Interest</p>
                   <p className="font-bold text-red-500">{formatCurrency(interestTotal)}</p>
                 </div>
               </div>
@@ -849,7 +849,7 @@ export default function Calculator() {
       {results && (
         <div className="mt-12 card">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-gray-700">{t.amortizationSchedule}</h3>
+            <h3 className="text-lg font-semibold text-gray-300">{t.amortizationSchedule}</h3>
             <button
               onClick={() => setExpandedAmortization(!expandedAmortization)}
               className="px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/10 rounded-lg"
@@ -860,20 +860,20 @@ export default function Calculator() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-gray-200 bg-gray-50">
-                  <th className="px-4 py-3 text-left font-semibold text-gray-700">{t.month}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.payment}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.principal}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.interest}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.balance}</th>
+                <tr className="border-b border-white/10 bg-white/[0.02]">
+                  <th className="px-4 py-3 text-left font-semibold text-gray-300">{t.month}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-300">{t.payment}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-300">{t.principal}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-300">{t.interest}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-300">{t.balance}</th>
                 </tr>
               </thead>
               <tbody>
                 {(expandedAmortization ? results.amortization : results.amortization.slice(0, 12)).map(
                   (row, idx) => (
-                    <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50">
-                      <td className="px-4 py-3 text-gray-700">{row.month}</td>
-                      <td className="px-4 py-3 text-right text-gray-700">
+                    <tr key={idx} className="border-b border-white/5 hover:bg-white/[0.02]">
+                      <td className="px-4 py-3 text-gray-300">{row.month}</td>
+                      <td className="px-4 py-3 text-right text-gray-300">
                         {formatCurrency(row.payment)}
                       </td>
                       <td className="px-4 py-3 text-right text-accent font-semibold">
@@ -882,7 +882,7 @@ export default function Calculator() {
                       <td className="px-4 py-3 text-right text-red-500 font-semibold">
                         {formatCurrency(row.interest)}
                       </td>
-                      <td className="px-4 py-3 text-right text-gray-700 font-semibold">
+                      <td className="px-4 py-3 text-right text-gray-300 font-semibold">
                         {formatCurrency(row.balance)}
                       </td>
                     </tr>
