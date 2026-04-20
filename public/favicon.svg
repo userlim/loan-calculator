@@ -1,41 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#7c5cbf;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6a4dab;stop-opacity:1" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0D9488"/>
     </linearGradient>
   </defs>
-
-  <!-- Background circle -->
-  <circle cx="50" cy="50" r="48" fill="url(#grad1)" opacity="0.1"/>
-
-  <!-- House -->
-  <path d="M 25 60 L 50 35 L 75 60 Z" fill="none" stroke="#7c5cbf" stroke-width="2.5" stroke-linejoin="round"/>
-
-  <!-- House body -->
-  <rect x="30" y="60" width="40" height="30" fill="none" stroke="#7c5cbf" stroke-width="2.5" stroke-linejoin="round"/>
-
-  <!-- Door -->
-  <rect x="44" y="70" width="12" height="20" fill="none" stroke="#7c5cbf" stroke-width="2"/>
-
-  <!-- Door knob -->
-  <circle cx="55" cy="80" r="1.5" fill="#7c5cbf"/>
-
-  <!-- Window -->
-  <rect x="33" y="63" width="8" height="8" fill="none" stroke="#7c5cbf" stroke-width="1.5"/>
-  <line x1="37" y1="63" x2="37" y2="71" stroke="#7c5cbf" stroke-width="1.5"/>
-  <line x1="33" y1="67" x2="41" y2="67" stroke="#7c5cbf" stroke-width="1.5"/>
-
-  <!-- Window -->
-  <rect x="59" y="63" width="8" height="8" fill="none" stroke="#7c5cbf" stroke-width="1.5"/>
-  <line x1="63" y1="63" x2="63" y2="71" stroke="#7c5cbf" stroke-width="1.5"/>
-  <line x1="59" y1="67" x2="67" y2="67" stroke="#7c5cbf" stroke-width="1.5"/>
-
-  <!-- Money symbol -->
-  <g opacity="0.8">
-    <circle cx="50" cy="45" r="8" fill="none" stroke="#7c5cbf" stroke-width="1.5"/>
-    <path d="M 50 41 L 50 49" stroke="#7c5cbf" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M 47 43 L 53 43" stroke="#7c5cbf" stroke-width="1.5" stroke-linecap="round"/>
-    <path d="M 47 47 L 53 47" stroke="#7c5cbf" stroke-width="1.5" stroke-linecap="round"/>
+  <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+  <g fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round">
+    <!-- House -->
+    <path d="M30 55 L50 35 L70 55" stroke-width="2.5"/>
+    <rect x="35" y="55" width="30" height="22" rx="2" stroke-width="2.5" fill="rgba(255,255,255,0.1)"/>
+    <rect x="44" y="62" width="12" height="15" rx="1" stroke-width="2"/>
+    <!-- Percent -->
+    <circle cx="72" cy="28" r="10" stroke-width="2" fill="rgba(255,255,255,0.15)"/>
+    <text x="72" y="33" text-anchor="middle" font-size="14" font-weight="bold" fill="white" stroke="none">%</text>
   </g>
 </svg>
