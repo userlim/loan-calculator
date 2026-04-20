@@ -1,47 +1,38 @@
-import type { Metadata } from 'next';
-import './globals.css';
+import type { Metadata } from 'next'
+import './globals.css'
 import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Loan Calculator (Free, 2026) – Monthly Payment & Amortization',
   description: 'Calculate monthly loan payments in seconds. Free 2026 mortgage & loan calculator with amortization schedule. For mortgages, auto loans, and personal loans.',
-  keywords:
-    'loan calculator, mortgage calculator, personal loan calculator, auto loan calculator, loan payment calculator, car payment calculator, amortization calculator, monthly payment calculator, loan interest calculator, student loan calculator, home loan calculator, loan payoff calculator, debt repayment calculator, refinance calculator, loan comparison calculator',
+  keywords: 'loan calculator, mortgage calculator, personal loan calculator, auto loan calculator, loan payment calculator, car payment calculator, amortization calculator, monthly payment calculator, loan interest calculator, student loan calculator, home loan calculator, loan payoff calculator, debt repayment calculator, refinance calculator, loan comparison calculator',
   metadataBase: new URL('https://loan-payment-calculator-eosin.vercel.app'),
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://loan-payment-calculator-eosin.vercel.app',
-    siteName: 'Loan Calculator',
     title: 'Loan Calculator (Free, 2026) – Monthly Payment & Amortization',
     description: 'Calculate monthly loan payments in seconds. Free 2026 mortgage & loan calculator with amortization schedule. For mortgages, auto loans, and personal loans.',
-  keywords:
-    'loan calculator, mortgage calculator, personal loan calculator, auto loan calculator, loan payment calculator, car payment calculator, amortization calculator, monthly payment calculator, loan interest calculator, student loan calculator, home loan calculator, loan payoff calculator, debt repayment calculator, refinance calculator, loan comparison calculator',
+    url: 'https://loan-payment-calculator-eosin.vercel.app',
+    siteName: 'Loan Calculator',
+    locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Loan Calculator - Free Mortgage & Loan Payment Calculator',
-    description: 'Calculate your monthly loan payments, mortgage calculations, and amortization schedules. Free online loan calculator tool.',
-  keywords:
-    'loan calculator, mortgage calculator, personal loan calculator, auto loan calculator, loan payment calculator, car payment calculator, amortization calculator, monthly payment calculator, loan interest calculator, student loan calculator, home loan calculator, loan payoff calculator, debt repayment calculator, refinance calculator, loan comparison calculator',
+    title: 'Loan Calculator',
+    description: 'Calculate monthly loan payments in seconds. Free 2026 mortgage & loan calculator with amortization schedule. For mortgages, auto loans, and personal loans.',
   },
+  robots: {
+    index: true,
+    follow: true,
+    'max-image-preview': 'large' as const,
+    'max-snippet': -1,
+    'max-video-preview': -1,
+  },
+  icons: { icon: '/favicon.svg' },
   alternates: {
     canonical: 'https://loan-payment-calculator-eosin.vercel.app',
     languages: {
       'en': 'https://loan-payment-calculator-eosin.vercel.app',
       'x-default': 'https://loan-payment-calculator-eosin.vercel.app',
-    },
-  },
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-snippet': -1,
-      'max-image-preview': 'large',
-      'max-video-preview': -1,
     },
   },
 };
@@ -88,7 +79,7 @@ gtag('config', 'G-P04TH8XJJ9');`
           __html: JSON.stringify({"@context": "https://schema.org", "@type": "WebPage", "speakable": {"@type": "SpeakableSpecification", "cssSelector": ["h1", ".keyword-seo-section p"]}})
         }} />
 </head>
-      <body className="bg-white text-gray-900 antialiased">
+      <body className="antialiased">
         <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-2">
@@ -105,16 +96,16 @@ gtag('config', 'G-P04TH8XJJ9');`
           {children}
         </main>
 
-        <footer className="bg-gray-900 text-gray-300 py-8 mt-16">
+        <footer className="bg-gray-900 text-[var(--text-muted)] py-8 mt-16">
           <div className="max-w-6xl mx-auto px-4 text-center">
             
             <div className="flex flex-wrap justify-center gap-4 mb-3">
-              <span className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Related Free Tools:</span>
-                <a href="https://take-home-pay-calculator-sandy.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Take-Home Pay Calculator</a>
-                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
-                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Gold Price Calculator</a>
-                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">Fuel Cost Calculator</a>
-                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
+              <span className="text-xs text-[var(--text-secondary)] font-semibold uppercase tracking-wider">Related Free Tools:</span>
+                <a href="https://take-home-pay-calculator-sandy.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Take-Home Pay Calculator</a>
+                <a href="https://inflation-rate-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Inflation Rate Calculator</a>
+                <a href="https://gold-price-today-calculator.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Gold Price Calculator</a>
+                <a href="https://fuel-cost-calculator-ten.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">Fuel Cost Calculator</a>
+                <a href="https://utilicalc.vercel.app" target="_blank" rel="noopener noreferrer" className="text-[var(--text-muted)] hover:text-white transition-colors text-xs">UtiliCalc All-in-One Tools</a>
             </div>
           <div className="flex flex-wrap justify-center gap-6 mb-4 text-sm">
               <a href="/privacy-policy" className="text-blue-400 hover:text-blue-300">
@@ -125,7 +116,7 @@ gtag('config', 'G-P04TH8XJJ9');`
               </a>
             </div>
             <p>&copy; 2026 Loan Calculator Tool. All rights reserved.</p>
-            <p className="text-sm mt-2 text-gray-400">Free financial calculator for educational purposes.</p>
+            <p className="text-sm mt-2 text-[var(--text-muted)]">Free financial calculator for educational purposes.</p>
           </div>
         </footer>
       </body>
