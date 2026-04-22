@@ -669,7 +669,7 @@ export default function Calculator() {
           <h2 className="text-2xl font-bold text-accent">{t.title}</h2>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t.loanAmount}
             </label>
             <input
@@ -681,7 +681,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t.downPayment}
             </label>
             <input
@@ -693,7 +693,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t.interestRate}
             </label>
             <input
@@ -706,7 +706,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t.loanTerm}
             </label>
             <input
@@ -716,15 +716,15 @@ export default function Calculator() {
               className="input mb-3"
             />
             <div className="grid grid-cols-3 gap-2">
-              <div className="text-xs font-semibold text-[var(--text-muted)] col-span-3 mb-1">{t.quickTerms}:</div>
+              <div className="text-xs font-semibold text-[#8B95A1] col-span-3 mb-1">{t.quickTerms}:</div>
               {[5, 10, 15, 20, 25, 30].map((years) => (
                 <button
                   key={years}
                   onClick={() => setLoanTerm(years)}
                   className={`py-2 px-3 text-sm font-bold rounded-lg transition-all ${
                     state.loanTerm === years
-                      ? 'bg-[var(--accent)] text-white'
-                      : 'bg-white/[0.04] text-[var(--text-muted)] hover:bg-[rgba(255,255,255,0.04)]'
+                      ? 'bg-[var(--accent)] text-[#191F28]'
+                      : 'bg-white/[0.04] text-[#8B95A1] hover:bg-[#F7F8FA]'
                   }`}
                 >
                   {years}y
@@ -734,7 +734,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t.loanType}
             </label>
             <select
@@ -750,7 +750,7 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[var(--text-muted)] mb-2">
+            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
               {t.language}
             </label>
             <select
@@ -790,28 +790,28 @@ export default function Calculator() {
         {results && (
           <div className="space-y-6">
             <div className="card">
-              <h3 className="text-lg font-semibold text-[var(--text-muted)] mb-4">Results</h3>
+              <h3 className="text-lg font-semibold text-[#8B95A1] mb-4">Results</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm text-[var(--text-muted)] mb-1">{t.monthlyPayment}</p>
+                  <p className="text-sm text-[#8B95A1] mb-1">{t.monthlyPayment}</p>
                   <p className="tool-result text-3xl">{formatCurrency(results.monthlyPayment)}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/[0.02] rounded-lg p-4">
-                    <p className="text-xs text-[var(--text-muted)] mb-1">{t.totalPayment}</p>
+                    <p className="text-xs text-[#8B95A1] mb-1">{t.totalPayment}</p>
                     <p className="text-lg font-bold text-accent">
                       {formatCurrency(results.totalPayment)}
                     </p>
                   </div>
                   <div className="bg-white/[0.02] rounded-lg p-4">
-                    <p className="text-xs text-[var(--text-muted)] mb-1">{t.totalInterest}</p>
+                    <p className="text-xs text-[#8B95A1] mb-1">{t.totalInterest}</p>
                     <p className="text-lg font-bold text-red-500">
                       {formatCurrency(results.totalInterest)}
                     </p>
                   </div>
                 </div>
                 <div className="bg-white/[0.02] rounded-lg p-4">
-                  <p className="text-xs text-[var(--text-muted)] mb-1">{t.ltvRatio}</p>
+                  <p className="text-xs text-[#8B95A1] mb-1">{t.ltvRatio}</p>
                   <p className="text-lg font-bold text-accent">{results.ltvRatio.toFixed(2)}%</p>
                 </div>
               </div>
@@ -819,24 +819,24 @@ export default function Calculator() {
 
             {/* Principal vs Interest Breakdown */}
             <div className="card">
-              <h3 className="text-lg font-semibold text-[var(--text-muted)] mb-4">{t.principalVsInterest}</h3>
-              <div className="w-full bg-[rgba(255,255,255,0.04)] rounded-full h-6 overflow-hidden">
+              <h3 className="text-lg font-semibold text-[#8B95A1] mb-4">{t.principalVsInterest}</h3>
+              <div className="w-full bg-[#F7F8FA] rounded-full h-6 overflow-hidden">
                 <div
                   className="bg-accent h-full flex items-center justify-end pr-2"
                   style={{ width: `${(principalTotal / (principalTotal + interestTotal)) * 100}%` }}
                 >
-                  <span className="text-xs font-bold text-white">
+                  <span className="text-xs font-bold text-[#191F28]">
                     {((principalTotal / (principalTotal + interestTotal)) * 100).toFixed(0)}%
                   </span>
                 </div>
               </div>
               <div className="flex justify-between text-sm mt-3">
                 <div>
-                  <p className="text-[var(--text-muted)]">Principal</p>
+                  <p className="text-[#8B95A1]">Principal</p>
                   <p className="font-bold text-accent">{formatCurrency(principalTotal)}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[var(--text-muted)]">Interest</p>
+                  <p className="text-[#8B95A1]">Interest</p>
                   <p className="font-bold text-red-500">{formatCurrency(interestTotal)}</p>
                 </div>
               </div>
@@ -849,7 +849,7 @@ export default function Calculator() {
       {results && (
         <div className="mt-12 card">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-[var(--text-muted)]">{t.amortizationSchedule}</h3>
+            <h3 className="text-lg font-semibold text-[#8B95A1]">{t.amortizationSchedule}</h3>
             <button
               onClick={() => setExpandedAmortization(!expandedAmortization)}
               className="px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/10 rounded-lg"
@@ -860,20 +860,20 @@ export default function Calculator() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/10 bg-white/[0.02]">
-                  <th className="px-4 py-3 text-left font-semibold text-[var(--text-muted)]">{t.month}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[var(--text-muted)]">{t.payment}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[var(--text-muted)]">{t.principal}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[var(--text-muted)]">{t.interest}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[var(--text-muted)]">{t.balance}</th>
+                <tr className="border-b border-[#E5E8EB] bg-white/[0.02]">
+                  <th className="px-4 py-3 text-left font-semibold text-[#8B95A1]">{t.month}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.payment}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.principal}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.interest}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.balance}</th>
                 </tr>
               </thead>
               <tbody>
                 {(expandedAmortization ? results.amortization : results.amortization.slice(0, 12)).map(
                   (row, idx) => (
-                    <tr key={idx} className="border-b border-white/5 hover:bg-white/[0.02]">
-                      <td className="px-4 py-3 text-[var(--text-muted)]">{row.month}</td>
-                      <td className="px-4 py-3 text-right text-[var(--text-muted)]">
+                    <tr key={idx} className="border-b border-[#E5E8EB] hover:bg-white/[0.02]">
+                      <td className="px-4 py-3 text-[#8B95A1]">{row.month}</td>
+                      <td className="px-4 py-3 text-right text-[#8B95A1]">
                         {formatCurrency(row.payment)}
                       </td>
                       <td className="px-4 py-3 text-right text-accent font-semibold">
@@ -882,7 +882,7 @@ export default function Calculator() {
                       <td className="px-4 py-3 text-right text-red-500 font-semibold">
                         {formatCurrency(row.interest)}
                       </td>
-                      <td className="px-4 py-3 text-right text-[var(--text-muted)] font-semibold">
+                      <td className="px-4 py-3 text-right text-[#8B95A1] font-semibold">
                         {formatCurrency(row.balance)}
                       </td>
                     </tr>
