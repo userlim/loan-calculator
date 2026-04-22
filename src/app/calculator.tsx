@@ -669,31 +669,31 @@ export default function Calculator() {
           <h2 className="text-2xl font-bold text-accent">{t.title}</h2>
 
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t.loanAmount}
             </label>
             <input
               type="number"
               value={state.loanAmount}
               onChange={(e) => setState({ ...state, loanAmount: parseFloat(e.target.value) || 0 })}
-              className="input"
+              className="tool-input"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t.downPayment}
             </label>
             <input
               type="number"
               value={state.downPayment}
               onChange={(e) => setState({ ...state, downPayment: parseFloat(e.target.value) || 0 })}
-              className="input"
+              className="tool-input"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t.interestRate}
             </label>
             <input
@@ -701,30 +701,30 @@ export default function Calculator() {
               step="0.01"
               value={state.interestRate}
               onChange={(e) => setState({ ...state, interestRate: parseFloat(e.target.value) || 0 })}
-              className="input"
+              className="tool-input"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t.loanTerm}
             </label>
             <input
               type="number"
               value={state.loanTerm}
               onChange={(e) => setState({ ...state, loanTerm: parseFloat(e.target.value) || 0 })}
-              className="input mb-3"
+              className="tool-input mb-3"
             />
             <div className="grid grid-cols-3 gap-2">
-              <div className="text-xs font-semibold text-[#8B95A1] col-span-3 mb-1">{t.quickTerms}:</div>
+              <div className="text-xs font-semibold text-gray-600 col-span-3 mb-1">{t.quickTerms}:</div>
               {[5, 10, 15, 20, 25, 30].map((years) => (
                 <button
                   key={years}
                   onClick={() => setLoanTerm(years)}
                   className={`py-2 px-3 text-sm font-bold rounded-lg transition-all ${
                     state.loanTerm === years
-                      ? 'bg-[var(--accent)] text-[#191F28]'
-                      : 'bg-white/[0.04] text-[#8B95A1] hover:bg-[#F7F8FA]'
+                      ? 'bg-accent text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                   }`}
                 >
                   {years}y
@@ -734,13 +734,13 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t.loanType}
             </label>
             <select
               value={state.loanType}
               onChange={(e) => setState({ ...state, loanType: e.target.value as CalculatorState['loanType'] })}
-              className="input"
+              className="tool-input"
             >
               <option value="mortgage">{t.mortgage}</option>
               <option value="auto">{t.auto}</option>
@@ -750,13 +750,13 @@ export default function Calculator() {
           </div>
 
           <div>
-            <label className="block text-sm font-semibold text-[#8B95A1] mb-2">
+            <label className="block text-sm font-semibold text-gray-700 mb-2">
               {t.language}
             </label>
             <select
               value={lang}
               onChange={(e) => setLang(e.target.value)}
-              className="input"
+              className="tool-input"
             >
               <option value="en">English</option>
               <option value="ko">한국어</option>
@@ -790,28 +790,28 @@ export default function Calculator() {
         {results && (
           <div className="space-y-6">
             <div className="card">
-              <h3 className="text-lg font-semibold text-[#8B95A1] mb-4">Results</h3>
+              <h3 className="text-lg font-semibold text-gray-700 mb-4">Results</h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-sm text-[#8B95A1] mb-1">{t.monthlyPayment}</p>
+                  <p className="text-sm text-gray-600 mb-1">{t.monthlyPayment}</p>
                   <p className="tool-result text-3xl">{formatCurrency(results.monthlyPayment)}</p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  <div className="bg-white/[0.02] rounded-lg p-4">
-                    <p className="text-xs text-[#8B95A1] mb-1">{t.totalPayment}</p>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <p className="text-xs text-gray-600 mb-1">{t.totalPayment}</p>
                     <p className="text-lg font-bold text-accent">
                       {formatCurrency(results.totalPayment)}
                     </p>
                   </div>
-                  <div className="bg-white/[0.02] rounded-lg p-4">
-                    <p className="text-xs text-[#8B95A1] mb-1">{t.totalInterest}</p>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <p className="text-xs text-gray-600 mb-1">{t.totalInterest}</p>
                     <p className="text-lg font-bold text-red-500">
                       {formatCurrency(results.totalInterest)}
                     </p>
                   </div>
                 </div>
-                <div className="bg-white/[0.02] rounded-lg p-4">
-                  <p className="text-xs text-[#8B95A1] mb-1">{t.ltvRatio}</p>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <p className="text-xs text-gray-600 mb-1">{t.ltvRatio}</p>
                   <p className="text-lg font-bold text-accent">{results.ltvRatio.toFixed(2)}%</p>
                 </div>
               </div>
@@ -819,24 +819,24 @@ export default function Calculator() {
 
             {/* Principal vs Interest Breakdown */}
             <div className="card">
-              <h3 className="text-lg font-semibold text-[#8B95A1] mb-4">{t.principalVsInterest}</h3>
-              <div className="w-full bg-[#F7F8FA] rounded-full h-6 overflow-hidden">
+              <h3 className="text-lg font-semibold text-gray-700 mb-4">{t.principalVsInterest}</h3>
+              <div className="w-full bg-gray-200 rounded-full h-6 overflow-hidden">
                 <div
                   className="bg-accent h-full flex items-center justify-end pr-2"
                   style={{ width: `${(principalTotal / (principalTotal + interestTotal)) * 100}%` }}
                 >
-                  <span className="text-xs font-bold text-[#191F28]">
+                  <span className="text-xs font-bold text-white">
                     {((principalTotal / (principalTotal + interestTotal)) * 100).toFixed(0)}%
                   </span>
                 </div>
               </div>
               <div className="flex justify-between text-sm mt-3">
                 <div>
-                  <p className="text-[#8B95A1]">Principal</p>
+                  <p className="text-gray-600">Principal</p>
                   <p className="font-bold text-accent">{formatCurrency(principalTotal)}</p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[#8B95A1]">Interest</p>
+                  <p className="text-gray-600">Interest</p>
                   <p className="font-bold text-red-500">{formatCurrency(interestTotal)}</p>
                 </div>
               </div>
@@ -849,7 +849,7 @@ export default function Calculator() {
       {results && (
         <div className="mt-12 card">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-lg font-semibold text-[#8B95A1]">{t.amortizationSchedule}</h3>
+            <h3 className="text-lg font-semibold text-gray-700">{t.amortizationSchedule}</h3>
             <button
               onClick={() => setExpandedAmortization(!expandedAmortization)}
               className="px-4 py-2 text-sm font-semibold text-accent hover:bg-accent/10 rounded-lg"
@@ -860,20 +860,20 @@ export default function Calculator() {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-[#E5E8EB] bg-white/[0.02]">
-                  <th className="px-4 py-3 text-left font-semibold text-[#8B95A1]">{t.month}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.payment}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.principal}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.interest}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-[#8B95A1]">{t.balance}</th>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="px-4 py-3 text-left font-semibold text-gray-700">{t.month}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.payment}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.principal}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.interest}</th>
+                  <th className="px-4 py-3 text-right font-semibold text-gray-700">{t.balance}</th>
                 </tr>
               </thead>
               <tbody>
                 {(expandedAmortization ? results.amortization : results.amortization.slice(0, 12)).map(
                   (row, idx) => (
-                    <tr key={idx} className="border-b border-[#E5E8EB] hover:bg-white/[0.02]">
-                      <td className="px-4 py-3 text-[#8B95A1]">{row.month}</td>
-                      <td className="px-4 py-3 text-right text-[#8B95A1]">
+                    <tr key={idx} className="border-b border-gray-100 hover:bg-gray-50">
+                      <td className="px-4 py-3 text-gray-700">{row.month}</td>
+                      <td className="px-4 py-3 text-right text-gray-700">
                         {formatCurrency(row.payment)}
                       </td>
                       <td className="px-4 py-3 text-right text-accent font-semibold">
@@ -882,7 +882,7 @@ export default function Calculator() {
                       <td className="px-4 py-3 text-right text-red-500 font-semibold">
                         {formatCurrency(row.interest)}
                       </td>
-                      <td className="px-4 py-3 text-right text-[#8B95A1] font-semibold">
+                      <td className="px-4 py-3 text-right text-gray-700 font-semibold">
                         {formatCurrency(row.balance)}
                       </td>
                     </tr>

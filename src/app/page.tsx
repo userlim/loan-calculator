@@ -89,78 +89,65 @@ export default function Home() {
       <Calculator />
 
       <section className="max-w-6xl mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12 text-gray-100">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {faqData.map((item, idx) => (
             <div key={idx} className="card">
               <h3 className="font-semibold text-lg text-accent mb-3">{item.question}</h3>
-              <p className="text-[#8B95A1] leading-relaxed">{item.answer}</p>
+              <p className="text-gray-600 leading-relaxed">{item.answer}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-white/[0.04] py-16 mt-12">
+      <section className="bg-gray-100 py-16 mt-12">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8 text-gray-100">Why Use Our Loan Calculator?</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">Why Use Our Loan Calculator?</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white/[0.03] rounded-2xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
               <div className="text-4xl font-bold text-accent mb-4">100%</div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-100">Free & Ad-Supported</h3>
-              <p className="text-[#8B95A1]">Use our calculator completely free with optional ads to support development.</p>
+              <h3 className="font-semibold text-lg mb-2 text-gray-900">Free & Ad-Supported</h3>
+              <p className="text-gray-600">Use our calculator completely free with optional ads to support development.</p>
             </div>
-            <div className="bg-white/[0.03] rounded-2xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
               <div className="text-4xl font-bold text-accent mb-4">20</div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-100">Languages</h3>
-              <p className="text-[#8B95A1]">Available in 20 languages to serve users around the world.</p>
+              <h3 className="font-semibold text-lg mb-2 text-gray-900">Languages</h3>
+              <p className="text-gray-600">Available in 20 languages to serve users around the world.</p>
             </div>
-            <div className="bg-white/[0.03] rounded-2xl p-6 text-center shadow-sm">
+            <div className="bg-white rounded-2xl p-6 text-center shadow-sm">
               <div className="text-4xl font-bold text-accent mb-4">Instant</div>
-              <h3 className="font-semibold text-lg mb-2 text-gray-100">Results</h3>
-              <p className="text-[#8B95A1]">Get instant calculations with detailed amortization schedules.</p>
+              <h3 className="font-semibold text-lg mb-2 text-gray-900">Results</h3>
+              <p className="text-gray-600">Get instant calculations with detailed amortization schedules.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Extended Content Section for SEO depth */}
-      <section id="content-depth-section" className="mt-20 max-w-3xl mx-auto px-6 relative z-[1]">
-        <h2 className="text-h2 mb-6 text-[#191F28]">Complete Guide</h2>
+      <section id="content-depth-section" className="mt-12 max-w-3xl mx-auto px-4">
+        <h2 className="text-2xl font-bold mb-6">Complete Guide</h2>
         
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[#191F28]">How Loan Amortization Works</h3>
-              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Amortization is the process of paying off a loan through regular installments over time. Each payment consists of two parts: principal (the amount that reduces your loan balance) and interest (the cost of borrowing). In the early years of a loan, most of your payment goes toward interest. As the loan matures, the principal portion increases while the interest portion decreases. This is called a standard amortization schedule.` }} />
+              <h3 className="text-lg font-semibold mb-2">How Loan Amortization Works</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Amortization is the process of paying off a loan through regular installments over time. Each payment consists of two parts: principal (the amount that reduces your loan balance) and interest (the cost of borrowing). In the early years of a loan, most of your payment goes toward interest. As the loan matures, the principal portion increases while the interest portion decreases. This is called a standard amortization schedule.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[#191F28]">Understanding Interest Rates: Fixed vs. Variable</h3>
-              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Fixed-rate loans maintain the same interest rate throughout the loan term, providing predictable monthly payments. Variable-rate (adjustable-rate) loans have rates that change periodically based on a benchmark rate like the prime rate or SOFR. ARMs typically start with lower rates but carry the risk of future increases. For a 30-year $300,000 mortgage, a 1% rate difference (6% vs. 7%) results in roughly $200 more per month and over $70,000 more in total interest.` }} />
+              <h3 className="text-lg font-semibold mb-2">Understanding Interest Rates: Fixed vs. Variable</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Fixed-rate loans maintain the same interest rate throughout the loan term, providing predictable monthly payments. Variable-rate (adjustable-rate) loans have rates that change periodically based on a benchmark rate like the prime rate or SOFR. ARMs typically start with lower rates but carry the risk of future increases. For a 30-year $300,000 mortgage, a 1% rate difference (6% vs. 7%) results in roughly $200 more per month and over $70,000 more in total interest.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[#191F28]">Types of Loans and Their Characteristics</h3>
-              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `<strong>Mortgages</strong> are secured by real property, typically with 15-30 year terms and the lowest interest rates. <strong>Auto loans</strong> are secured by the vehicle, usually 3-7 years with moderate rates. <strong>Personal loans</strong> are unsecured, with higher rates but flexible use. <strong>Student loans</strong> include federal (fixed rates, income-driven repayment options) and private (variable rates possible, fewer protections). Our calculator works with all loan types — just enter the amount, rate, and term.` }} />
+              <h3 className="text-lg font-semibold mb-2">Types of Loans and Their Characteristics</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `<strong>Mortgages</strong> are secured by real property, typically with 15-30 year terms and the lowest interest rates. <strong>Auto loans</strong> are secured by the vehicle, usually 3-7 years with moderate rates. <strong>Personal loans</strong> are unsecured, with higher rates but flexible use. <strong>Student loans</strong> include federal (fixed rates, income-driven repayment options) and private (variable rates possible, fewer protections). Our calculator works with all loan types — just enter the amount, rate, and term.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[#191F28]">Strategies for Paying Off Loans Faster</h3>
-              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Several strategies can help you pay off loans early and save thousands in interest. <strong>Biweekly payments</strong> (paying half your monthly amount every two weeks) result in 13 full payments per year instead of 12, potentially shaving years off a 30-year mortgage. <strong>Extra principal payments</strong> — even an extra $100/month on a $250,000 mortgage at 7% — can save over $80,000 in interest and reduce the loan term by 7+ years. <strong>Refinancing</strong> to a lower rate can dramatically reduce total costs when rates drop.` }} />
+              <h3 className="text-lg font-semibold mb-2">Strategies for Paying Off Loans Faster</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Several strategies can help you pay off loans early and save thousands in interest. <strong>Biweekly payments</strong> (paying half your monthly amount every two weeks) result in 13 full payments per year instead of 12, potentially shaving years off a 30-year mortgage. <strong>Extra principal payments</strong> — even an extra $100/month on a $250,000 mortgage at 7% — can save over $80,000 in interest and reduce the loan term by 7+ years. <strong>Refinancing</strong> to a lower rate can dramatically reduce total costs when rates drop.` }} />
             </div>
             <div className="mb-6">
-              <h3 className="text-h3 mb-2 text-[#191F28]">Key Metrics to Understand Before Borrowing</h3>
-              <p className="text-[#4E5968] leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Before taking any loan, understand these key metrics: <strong>APR</strong> (Annual Percentage Rate) includes fees and gives a more accurate cost picture than the interest rate alone. <strong>DTI</strong> (Debt-to-Income Ratio) — lenders typically want total debt payments below 36-43% of gross income. <strong>LTV</strong> (Loan-to-Value Ratio) — for mortgages, LTV above 80% typically requires PMI (Private Mortgage Insurance), adding 0.5-1% annually to your costs.` }} />
+              <h3 className="text-lg font-semibold mb-2">Key Metrics to Understand Before Borrowing</h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm" dangerouslySetInnerHTML={{ __html: `Before taking any loan, understand these key metrics: <strong>APR</strong> (Annual Percentage Rate) includes fees and gives a more accurate cost picture than the interest rate alone. <strong>DTI</strong> (Debt-to-Income Ratio) — lenders typically want total debt payments below 36-43% of gross income. <strong>LTV</strong> (Loan-to-Value Ratio) — for mortgages, LTV above 80% typically requires PMI (Private Mortgage Insurance), adding 0.5-1% annually to your costs.` }} />
             </div>
       </section>
-    
-      {/* Keyword-Optimized Content */}
-      <section id="keyword-seo-section" className="mt-12 max-w-3xl mx-auto px-6 pb-16 relative z-[1]">
-        <p className="text-sm text-[#8B95A1] leading-relaxed">
-          Calculate your monthly loan payments instantly. Our free loan calculator handles mortgages, auto loans, personal loans, and student loans. View amortization schedules, compare loan payoff strategies, and use our refinance calculator to find savings. Simple monthly payment calculations.
-        </p>
-<div className="mt-3 flex flex-wrap gap-2">
-          <a href="https://take-home-pay-calculator-sandy.vercel.app" className="text-xs text-[var(--accent)] hover:underline opacity-70 hover:opacity-100">Salary Tax Calculator →</a>
-          <a href="https://inflation-rate-calculator.vercel.app" className="text-xs text-[var(--accent)] hover:underline opacity-70 hover:opacity-100">Inflation Calculator →</a>
-          <a href="https://bmi-calculator-free.vercel.app" className="text-xs text-[var(--accent)] hover:underline opacity-70 hover:opacity-100">BMI Calculator →</a>
-        </div>
-
-      </section>
-      </>
+    </>
   );
 }
